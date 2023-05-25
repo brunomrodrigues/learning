@@ -30,4 +30,4 @@ while(tentativa <= total_tentativas_desejadas):
 
     tentativa                  = tentativa + 1
 
-print("Fim do Jogo!")
+print("Fim do Jogo!!!")
