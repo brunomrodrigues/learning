@@ -18,9 +18,10 @@ def play():
             mark_correct_char(response, secret_word, hitted_characters)
         else:
             mistakes+=1    
+            draw_hang(mistakes)
            
 
-        hanged = mistakes == 6
+        hanged = mistakes == 7
         hit    = "_" not in hitted_characters
         
     if(hit):
@@ -90,6 +91,56 @@ def print_loser_message(secret_word):
     print("   \_             _/       ")
     print("     \_         _/         ")
     print("       \_______/           ")
+
+def draw_hang(mistakes):
+    print("  _______     ")
+    print(" |/      |    ")
+
+    if(mistakes == 1):
+        print(" |      (_)   ")
+        print(" |            ")
+        print(" |            ")
+        print(" |            ")
+
+    if(mistakes == 2):
+        print(" |      (_)   ")
+        print(" |      \     ")
+        print(" |            ")
+        print(" |            ")
+
+    if(mistakes == 3):
+        print(" |      (_)   ")
+        print(" |      \|    ")
+        print(" |            ")
+        print(" |            ")
+
+    if(mistakes == 4):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |            ")
+        print(" |            ")
+
+    if(mistakes == 5):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |            ")
+
+    if(mistakes == 6):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |      /     ")
+
+    if (mistakes == 7):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |      / \   ")
+
+    print(" |            ")
+    print("_|___         ")
+    print()
 
 if(__name__ == "__main__"):
     play()
