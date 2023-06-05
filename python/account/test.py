@@ -1,24 +1,6 @@
-def create_account(number, owner, balance, limit):
-    account = {"number":number, "owner": owner, "balance": balance, "limit": limit}
-    return account
+from account import Account
 
-def deposit(account, value):
-    account['balance']+= value
-
-def withdraw(account, value):
-    account['balance']-= value
-
-def show_balance(account):
-    print("Your balance is {}".format(account['balance']))
-
-
-
-account = create_account(123456, "Bruno", 10000, 5000)
-
-show_balance(account)
-deposit(account, 12000)
-show_balance(account)
-withdraw(account, 5000)
-show_balance(account)
+account = Account(123, "Bruno Rodrigues", 5000, 500)
+account.show_balance()
 
 
