@@ -1,6 +1,8 @@
 from account import Account
+from client import Client
 
 account = Account(123, "Bruno Rodrigues", 5000, 500)
-account.show_balance()
+client  = Client("andrei")
+print(client.name)
 
 
