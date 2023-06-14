@@ -1,8 +1,18 @@
-class Playlist(list):
+class Playlist:
     def __init__(self, name, programs):
-        super().__init__(programs)
-        self.name     = name
-    
+        self.name      = name
+        self._programs = programs
+
+    @property
+    def programs_list(self):
+        return self._programs  
+
+    def __len__(self):
+        return len(self._programs)
+
+    def __getitem__(self, item):
+        return self._programs[item]
+
 class Program:
     def __init__(self, name, year):
         self._name      = name.title()
@@ -55,12 +65,13 @@ walkingdead.give_like()
 shining = Movie("shining", 1989, 120)
 shining.give_like()
 
-movies_series = [avengers, breakingbad, shining, walkingdead]
+shining1 = Movie("shining", 1989, 120)
+shining1.give_like()
+
+movies_series = [avengers, breakingbad, shining, walkingdead, shining1]
 
 playlist = Playlist("Weekend", movies_series)
-
-print(f'Walking dead is_in_playlist? {walkingdead in playlist}')
-
+print(f'Avenger is in playlist? {avengers in playlist}')
 print(f'Playlist size {len(playlist)}')
 for program in playlist:
     print(program)
