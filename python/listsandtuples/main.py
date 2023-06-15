@@ -81,3 +81,47 @@ acc2 = Account("2", 457)
 accs = [acc1, acc2]
 for acc in sorted(accs):
     print(acc)
+
+#Set 
+list1 = [1,2,3,4,5,6,7,8,9,5]
+print(set(list1))
+
+list1 = {1,2,3,4,5,6,7,8,9,5}
+list2 = {99, 3,4,5,6,7,8,9,5,45,89}
+print(list1 | list2)
+
+#Intersection of sets
+list1 = {1,2,3,4,5,6,7,8,9,5}
+list2 = {99, 3,4,5,6,7,8,9,5,45,89}
+print(list1 & list2)
+
+#Subtraction of sets
+list1 = {1,2,3,4,5,6,7,8,9,5}
+list2 = {99, 3,4,5,6,7,8,9,5,45,89}
+print(list1 - list2)
+
+#Or exclusive of sets
+list1 = {1,2,3,4,5,6,7,8,9,5}
+list2 = {99, 3,4,5,6,7,8,9,5,45,89}
+print(list1 ^ list2)
+
+#Changing sets
+list1.add(956)
+frozenset(list1)
+
+#Dictionarys
+dic = {"Bruno": 1,
+       "Mariana": 2}
+
+dic["Bruno"] = 3
+del dic["Bruno"]
+print(dic.get("Bruno"))
+
+dic = {"Bruno": 1,
+       "Mariana": 2,
+       "Teste": 3}
+
+for n in dic.items():
+    print(n)
+
+
